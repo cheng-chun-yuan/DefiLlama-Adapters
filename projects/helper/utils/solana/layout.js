@@ -7,6 +7,7 @@ const { INVESTIN_FUND_DATA, } = require('./layouts/investin-layout')
 const { MARKET_STATE_LAYOUT_V3, OPEN_ORDERS_LAYOUT_V2, MARKET_STATE_LAYOUT_V3_MINIMAL } = require('./layouts/openbook-layout')
 const { ReserveLayout, ReserveLayoutLarix, MintLayout, AccountLayout, TokenSwapLayout, ESOLStakePoolLayout, PARLAY_LAYOUT_PARTIAL, HH_PARI_LAYOUT_PARTIAL, ACCESS_LAYOUT, 
   METEORA_STABLE_SWAP_LAYOUT,
+  GUARDIAN_SETTING_LAYOUT,
 } = require('./layouts/mixed-layout');
 const { SCN_STAKE_POOL, TOKEN_LAYOUT, } = require("./layouts/scnSOL");
 const { SANCTUM_INFINITY } = require("./layouts/sanctum-infinity-layout");
@@ -70,6 +71,7 @@ const customDecoders = {
   hhPari: defaultParseLayout(HH_PARI_LAYOUT_PARTIAL),
   access: defaultParseLayout(ACCESS_LAYOUT),
   meteoraStablePool: defaultParseLayout(METEORA_STABLE_SWAP_LAYOUT),
+  GuardianSetting: defaultParseLayout(GUARDIAN_SETTING_LAYOUT),
 }
 
 function decodeAccount(layout, accountInfo) {
